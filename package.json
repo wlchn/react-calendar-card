@@ -1,0 +1,22 @@
+{
+  "name": "react-calendar-card",
+  "description": "React Calendar Card",
+  "version": "1.0.0",
+  "author": "Alan Wang <wlchn@qq.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/wlchn/react-calendar-card.git"
+  },
+  "homepage": "https://github.com/wlchn/react-calendar-card",
+  "keywords": [
+    "react",
+    "calendar",
+    "card"
+  ],
+  "dependencies": {
+    "eslint": "^4.2.0",
+    "react": "^15.6.1"
+  },
+  "devDependencies": {}
+}
