@@ -2,6 +2,7 @@
 React Calendar Card Component
 
 <img src="./demo.png" width="254">
+
 ## Installation
 
 The package can be installed via NPM:
