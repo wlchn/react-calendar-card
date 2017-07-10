@@ -1,5 +1,5 @@
 # react-calendar-card
-React Calendar Card Component
+React Calendar Card Component.
 
 <img src="./demo.png" width="254">
 
@@ -8,7 +8,7 @@ React Calendar Card Component
 The package can be installed via NPM:
 
 ```
-npm install react-datepicker --save
+npm install react-calendar-card --save
 ```
 ## Getting Started
 The example below shows how to include the css from this package if your build system supports requiring css files (webpack is one that does).
