@@ -1,7 +1,7 @@
 # react-calendar-card
 React Calendar Card Component
 
-![](./demo.png =254x308)
+<img src="./demo.png" width="254">
 ## Installation
 
 The package can be installed via NPM:
