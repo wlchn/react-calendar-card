@@ -1,14 +1,18 @@
 {
   "name": "react-calendar-card",
   "description": "React Calendar Card",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "author": "Alan Wang <wlchn@qq.com>",
   "license": "MIT",
+  "main": "./dist/index.js",
   "repository": {
     "type": "git",
     "url": "http://github.com/wlchn/react-calendar-card.git"
   },
-  "homepage": "https://github.com/wlchn/react-calendar-card",
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "babel ./src --out-dir ./dist"
+  },
   "keywords": [
     "react",
     "calendar",
@@ -18,5 +22,9 @@
     "eslint": "^4.2.0",
     "react": "^15.6.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1"
+  }
 }

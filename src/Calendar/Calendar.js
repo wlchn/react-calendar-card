@@ -1,6 +1,5 @@
-require("./Calendar.scss");
 import React, { Component } from "react";
-import H from "./helper/helper";
+import H from "../helper/helper";
 
 class Calendar extends Component {
 

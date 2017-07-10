@@ -1,0 +1,161 @@
+.calendar {
+  width: 228px;
+  border-radius: 2px;
+  background-color: #f9f9f9;
+  padding: 18px 8px;
+}
+.calendar div, .calendar ul, .calendar li {
+  margin: 0;
+  padding: 0;
+}
+.calendar ul, .calendar li {
+  list-style: none;
+}
+.calendar a {
+  text-decoration: none;
+  color: #000;
+}
+.calendar .calendar-header {
+  width: 100%;
+  text-align: center;
+  height: 28px;
+  color: #333;
+  font-size: 16px;
+}
+.calendar .calendar-header > i {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  vertical-align: -1px;
+  position: relative;
+  cursor: pointer;
+}
+.calendar .calendar-header > span {
+  margin: 0 50px;
+}
+.calendar .calendar-header > .icon-left:before, .calendar .calendar-header > .icon-left:after, .calendar .calendar-header > .icon-right:before, .calendar .calendar-header > .icon-right:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.calendar .calendar-header > .icon-left:before {
+  border: 7px solid red;
+  border-color: transparent #666 transparent transparent;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.calendar .calendar-header > .icon-left:after {
+  border: 7px solid #fff;
+  border-color: transparent #fff transparent transparent;
+  -webkit-transform: translateX(-40%);
+  -moz-transform: translateX(-40%);
+  -ms-transform: translateX(-40%);
+  -o-transform: translateX(-40%);
+  transform: translateX(-40%);
+}
+.calendar .calendar-header > .icon-right:before {
+  border: 7px solid red;
+  border-color: transparent transparent transparent #666;
+  -webkit-transform: translateX(50%);
+  -moz-transform: translateX(50%);
+  -ms-transform: translateX(50%);
+  -o-transform: translateX(50%);
+  transform: translateX(50%);
+}
+.calendar .calendar-header > .icon-right:after {
+  border: 7px solid #fff;
+  border-color: transparent transparent transparent #fff;
+  -webkit-transform: translateX(40%);
+  -moz-transform: translateX(40%);
+  -ms-transform: translateX(40%);
+  -o-transform: translateX(40%);
+  transform: translateX(40%);
+}
+.calendar .calendar-body > .c-body-head {
+  width: 100%;
+  display: flex;
+}
+.calendar .calendar-body > .c-body-head > li {
+  flex: 1;
+  text-align: center;
+  padding-top: 4px;
+  height: 32px;
+  font-size: 14px;
+  color: #999;
+}
+.calendar .calendar-body > .c-body-content {
+  width: 100%;
+}
+.calendar .calendar-body > .c-body-content > ul {
+  display: flex;
+}
+.calendar .calendar-body > .c-body-content > ul > li {
+  flex: 1;
+  text-align: center;
+  padding-top: 4px;
+  height: 30px;
+}
+.calendar .content-row > .item-gray > a {
+  color: #ccc;
+}
+.calendar .content-row > .item-tag > a {
+  position: relative;
+}
+.calendar .content-row > .item-tag > a:after {
+  content: '';
+  width: 4px;
+  height: 4px;
+  position: absolute;
+  top: -1px;
+  right: 0;
+  -webkit-transform: translate3D(-50%, 70%, 0);
+  -moz-transform: translate3D(-50%, 70%, 0);
+  -ms-transform: translate3D(-50%, 70%, 0);
+  -o-transform: translate3D(-50%, 70%, 0);
+  transform: translate3D(-50%, 70%, 0);
+  background-color: #ff7070;
+  border-radius: 50%;
+}
+.calendar .content-row > li {
+  width: 30px;
+  height: 30px;
+}
+.calendar .content-row > li > a {
+  width: 22px;
+  height: 22px;
+  text-align: center;
+  display: inline-block;
+  padding-top: 3px;
+  font-size: 12px;
+  color: #333;
+}
+.calendar .content-row > li > a:hover {
+  background-color: #e5e5e5;
+  border-radius: 4px;
+  height: 22px;
+  width: 22px;
+}
+.calendar .content-row > .item-current, .calendar .content-row > .item-active {
+  text-align: center;
+}
+.calendar .content-row > .item-current > a {
+  background-color: #55aeff !important;
+  color: #fff !important;
+  border-radius: 4px;
+  height: 22px;
+  width: 22px;
+}
+.calendar .content-row > .item-active > a {
+  background-color: #ffa040 !important;
+  color: #fff !important;
+  border-radius: 4px;
+  height: 22px;
+  width: 22px;
+}
+.calendar .content-row > .item-tag.item-current a:after, .calendar .content-row > .item-tag.item-active a:after {
+  background-color: #fff !important;
+}
