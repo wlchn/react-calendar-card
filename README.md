@@ -15,9 +15,9 @@ The example below shows how to include the css from this package if your build s
 ```js
 import React from 'react';
 import moment from 'moment';
-import { Calendar } from 'react-calendar-card';
+import Calendar from 'react-calendar-card';
 
-import 'react-calendar-card/dist/index.css';
+import 'react-calendar-card/dist/style.css';
 
 class Example extends React.Component {
   constructor (props) {
