@@ -20,7 +20,7 @@ class Calendar extends Component {
   }
 
   componentDidMount() {
-    let { year, month, day} = this.props;
+    let { year, month, day } = this.props;
 
     if(year && month && day) {
       let dateNumArray = this._initMonthDayNumber(year),
@@ -39,7 +39,7 @@ class Calendar extends Component {
   _initMonthDayNumber(year) {
     let _dateArray = [];
 
-    for (var i = 0; i < 12; i++) {
+    for (let i = 0; i < 12; i++) {
       switch (i + 1) {
       case 1:
       case 3:
@@ -80,7 +80,7 @@ class Calendar extends Component {
 
 
   selectDate(sDay) {
-    let { selectYear, selectMonth} = this.state;
+    let { selectYear, selectMonth } = this.state;
     this.setState({
       historyYear: selectYear,
       historyMonth: selectMonth,
@@ -92,7 +92,7 @@ class Calendar extends Component {
   }
 
   previousMonth() {
-    let { currentYear, currentMonth, currentDay, selectYear, selectMonth, selectDay, dateNumArray, firstDay} = this.state;
+    let { currentYear, currentMonth, currentDay, selectYear, selectMonth, selectDay, dateNumArray, firstDay } = this.state;
 
     if (selectMonth === 0) {
       selectYear = +selectYear - 1;
@@ -121,7 +121,7 @@ class Calendar extends Component {
   }
 
   nextMonth() {
-    let { currentYear, currentMonth, currentDay, selectYear, selectMonth, selectDay, dateNumArray, firstDay} = this.state;
+    let { currentYear, currentMonth, currentDay, selectYear, selectMonth, selectDay, dateNumArray, firstDay } = this.state;
 
     if (selectMonth === 11) {
       selectYear = +selectYear + 1;
@@ -150,11 +150,9 @@ class Calendar extends Component {
   }
 
   render() {
-    let { rowNumber, colNumber, tags } = this.props;
-    let { currentYear, currentMonth, currentDay,
-            selectYear, selectMonth,
-            historyYear, historyMonth, historyDay,
-            dateNumArray, firstDay} = this.state;
+    let { rowNumber, colNumber, tags, language } = this.props;
+    let { currentYear, currentMonth, currentDay, selectYear, selectMonth,
+      historyYear, historyMonth, historyDay, dateNumArray, firstDay } = this.state;
 
     let monthDay = dateNumArray[selectMonth],
       nDay = rowNumber * colNumber - firstDay - monthDay,
@@ -174,8 +172,8 @@ class Calendar extends Component {
     previousMonthDays = dateNumArray[previousMonth];
     for (let i = 0; i < firstDay; i++) {
       let previousLink = (<li className="item-gray" key={"previous"+i}>
-                <a href="javascript:;">{previousMonthDays - (firstDay - i) + 1}</a>
-            </li>);
+          <a href="javascript:;">{previousMonthDays - (firstDay - i) + 1}</a>
+      </li>);
       previousDays.push(previousLink);
     }
 
@@ -233,27 +231,28 @@ class Calendar extends Component {
       }
     }
 
+    let weekWords = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
+    if (language === "zh_CN") {
+      weekWords = ["日", "一", "二", "三", "四", "五", "六"];
+    }
+
     return (
       <div className="calendar">
         <div className="calendar-header">
           <i className="icon-left" onClick={this.previousMonth.bind(this)}></i>
-          <span>{selectYear}/{selectMonth < 10 ? `0${selectMonth}` : selectMonth}</span>
+          <span>
+            { selectYear }/{ selectMonth < 10 ? "0" + selectMonth : selectMonth }
+          </span>
           <i className="icon-right" onClick={this.nextMonth.bind(this)}></i>
         </div>
         <div className="calendar-body">
           <ul className="c-body-head">
-            <li>日</li>
-            <li>一</li>
-            <li>二</li>
-            <li>三</li>
-            <li>四</li>
-            <li>五</li>
-            <li>六</li>
+            { weekWords.map((w) => { return (<li>{w}</li>); }) }
           </ul>
           <div className="c-body-content">
             {
-              ulList.map((u, index) => {
-                return (<ul key={"ul"+index} className="content-row">{u}</ul>);
+              ulList.map((u, i) => {
+                return (<ul key={i} className="content-row">{u}</ul>);
               })
             }
           </div>

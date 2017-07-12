@@ -1,7 +1,7 @@
 {
   "name": "react-calendar-card",
   "description": "React Calendar Card",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": "Alan Wang <wlchn@qq.com>",
   "license": "MIT",
   "main": "./dist/index.js",

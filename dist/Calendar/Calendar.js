@@ -213,7 +213,8 @@ var Calendar = function (_Component) {
       var _props2 = this.props,
           rowNumber = _props2.rowNumber,
           colNumber = _props2.colNumber,
-          tags = _props2.tags;
+          tags = _props2.tags,
+          language = _props2.language;
       var _state4 = this.state,
           currentYear = _state4.currentYear,
           currentMonth = _state4.currentMonth,
@@ -322,6 +323,11 @@ var Calendar = function (_Component) {
         }
       }
 
+      var weekWords = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
+      if (language === "zh_CN") {
+        weekWords = ["日", "一", "二", "三", "四", "五", "六"];
+      }
+
       return _react2.default.createElement(
         "div",
         { className: "calendar" },
@@ -344,49 +350,21 @@ var Calendar = function (_Component) {
           _react2.default.createElement(
             "ul",
             { className: "c-body-head" },
-            _react2.default.createElement(
-              "li",
-              null,
-              "\u65E5"
-            ),
-            _react2.default.createElement(
-              "li",
-              null,
-              "\u4E00"
-            ),
-            _react2.default.createElement(
-              "li",
-              null,
-              "\u4E8C"
-            ),
-            _react2.default.createElement(
-              "li",
-              null,
-              "\u4E09"
-            ),
-            _react2.default.createElement(
-              "li",
-              null,
-              "\u56DB"
-            ),
-            _react2.default.createElement(
-              "li",
-              null,
-              "\u4E94"
-            ),
-            _react2.default.createElement(
-              "li",
-              null,
-              "\u516D"
-            )
+            weekWords.map(function (w) {
+              return _react2.default.createElement(
+                "li",
+                null,
+                w
+              );
+            })
           ),
           _react2.default.createElement(
             "div",
             { className: "c-body-content" },
-            ulList.map(function (u, index) {
+            ulList.map(function (u, i) {
               return _react2.default.createElement(
                 "ul",
-                { key: "ul" + index, className: "content-row" },
+                { key: i, className: "content-row" },
                 u
               );
             })
