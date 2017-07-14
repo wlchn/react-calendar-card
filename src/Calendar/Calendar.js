@@ -236,6 +236,7 @@ class Calendar extends Component {
       weekWords = ["日", "一", "二", "三", "四", "五", "六"];
     }
 
+    selectMonth = selectMonth + 1;
     return (
       <div className="calendar">
         <div className="calendar-header">

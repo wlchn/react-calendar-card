@@ -24,7 +24,7 @@ class Example extends React.Component {
   constructor (props) {
     super(props)
 
-    const tags = [9, 27];
+    const tags = [7, 15];
     const year = moment().year();
     const month = moment().month() + 1;
     const day = moment().date();
