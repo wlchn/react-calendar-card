@@ -3,8 +3,8 @@ export const isLeapYear = function(year) {
     throw new Error("year format error");
   }
 
-  if (+year < 1790) {
-    throw new Error("can't litter then 1790");
+  if (+year < 1970) {
+    throw new Error("can't littler then 1970");
   }
 
   return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
